@@ -5,6 +5,7 @@ import './App.css'
 import { ImageProfile } from './components/ImageProfile'
 import { Title } from './components/Title'
 import moment from 'moment'
+import imgprofile from './assets/profile.png'
 
 function App() {
   const [hide, setHide] = useState(false)
@@ -13,7 +14,7 @@ function App() {
     <>
      <main id="main">
       <div className="leftport">
-        <ImageProfile image="/src/assets/profile.png" />
+        <ImageProfile image={imgprofile}/>
         <Title title="Pisit Watchararattanavalee (Fluke)">
           <p>ตำแหน่ง : นักศึกษา</p>
         </Title>
@@ -50,6 +51,7 @@ function App() {
           <p>skill1 : skill</p>
           <p>skill2 : skill</p>
           <p>skill3 : skill</p>
+          <p>skill4 : skill</p>
         </Title>
       </div>
      </main>
