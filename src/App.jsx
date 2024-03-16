@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -6,9 +6,29 @@ import { ImageProfile } from './components/ImageProfile'
 import { Title } from './components/Title'
 import moment from 'moment'
 import imgprofile from './assets/profile.png'
+import axios from 'axios';
 
-function App() {
+
+const endpoint = 'https://sheetdb.io/api/v1/rk81b6yuz48vu'
+
+const App = () => {
   const [hide, setHide] = useState(false)
+
+  const [data, setData] = useState([])
+
+  const callApi = async () => {
+    const d = await axios.get(endpoint).then((response) => {
+      console.log('response', response)
+      const data = response.data
+      setData(data)
+      return data
+    })
+  }
+
+     
+  useEffect( () => {
+    callApi()
+  },[])
 
   return (
     <>
@@ -53,10 +73,17 @@ function App() {
           <p>skill3 : skill</p>
           <p>skill4 : skill</p>
         </Title>
+        
+        <Title title="เพื่อนในชั้นเรียน ">
+        <div>
+          {data.map((record) => <div key ={record.code}>{record.code}{record.name}</div>)}
+        </div>
+        </Title>
+
       </div>
      </main>
     </>
   )
-}
+  }
 
 export default App
