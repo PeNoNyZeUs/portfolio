@@ -57,28 +57,29 @@ const App = () => {
         </Title>
       </div>
       <div className="rightport">
-        <Title title="Profile">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatem quasi corporis delectus dolorum laudantium id. Consectetur dignissimos sapiente dolore aperiam minima eaque praesentium, molestiae provident magni blanditiis earum similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatem quasi corporis delectus dolorum laudantium id. Consectetur dignissimos sapiente dolore aperiam minima eaque praesentium, molestiae provident magni blanditiis earum similique!
+        <Title title="About Me">
+          <p>Currently studying for a 2nd year bachelor's degree at Suan Sunandha Rajabhat University. Faculty of Information Technology Have experience in practicing designing with Adobe Illustrator and are interested in studying more UX and UI design in order to increase a variety of skills and effectively apply knowledge to the position of UX/UI Designer.
          </p>
         </Title>
         
         <Title title="Work Experience">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatem quasi corporis delectus dolorum laudantium id. Consectetur dignissimos sapiente dolore aperiam minima eaque praesentium, molestiae provident magni blanditiis earum similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatem quasi corporis delectus dolorum laudantium id. Consectetur dignissimos sapiente dolore aperiam minima eaque praesentium, molestiae provident magni blanditiis earum similique!
-         </p>
+          <p class="text-yellow bold">Senior Project</p>
+          <p>Enhancing Computer Equipment Procurement through the Integration of 3D Computer Hardware Models with Online Platform</p>
+          <p class="text-yellow bold">Intern Shift</p>
+          <p>Smart Shift Solution - UX UI Designer</p>
+         
         </Title>
 
         <Title title="Skills">
-          <p>skill1 : skill</p>
-          <p>skill2 : skill</p>
-          <p>skill3 : skill</p>
-          <p>skill4 : skill</p>
+          <p>English : Advance</p>
+          <p>Adobe illustrator : basic</p>
+          <p>Figma : intermediate</p>
+          <p>Canva : intermediate</p>
+          <p>HTML : basic</p>
+          <p>CSS : basic</p>
         </Title>
         
-        <Title title="เพื่อนในชั้นเรียน ">
-        <div>
-          {data.map((record) => <div key ={record.code}>{record.code}{record.name}</div>)}
-        </div>
-        </Title>
+
 
       </div>
      </main>

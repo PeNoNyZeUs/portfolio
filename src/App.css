@@ -74,3 +74,11 @@ h2 {
 .read-the-docs {
   color: #888;
 }
+
+.text-yellow{
+  color: yellow;
+}
+
+.bold{
+  font-weight: bold;
+}
